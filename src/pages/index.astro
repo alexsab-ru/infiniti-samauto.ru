@@ -18,8 +18,6 @@ const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(
 	<Banner />
 	<PageTitle />
 	{TIMER_ENDTIME && <Timer endtime={TIMER_ENDTIME} title="До конца акции осталось" subtitle="Подзаголовок" />}
-	<ModelList />
-	{models && models.map((model: any) => model.show && <Model model={model}/>)}
 	<Callback bgUrl="/img/konkurenty.webp" />
 	<Services />
 	<Contacts
