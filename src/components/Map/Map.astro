@@ -63,7 +63,7 @@ function init() {
 	});
 	salons.map((salon) => {
 		center = add(center,salon.map.coords);
-		const _ball_bg = salon.map.balloon ? salon.map.balloon : '/img/map.balloon.png';
+		const _ball_bg = salon.map.balloon ? salon.map.balloon : './img/map.balloon.png';
 		myMapTemp.geoObjects.add(
 			new ymaps.Placemark(
 				[salon.map.coords[0], salon.map.coords[1]],
