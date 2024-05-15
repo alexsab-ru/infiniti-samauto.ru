@@ -22,7 +22,7 @@ const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(
 	<Banner />
 	<PageTitle />
 	<SpecialServices items={specialServicesData} />
-	<Faq items={faqData} />
+	<Faq items={faqData} title="Часто задаваемые вопросы" />
 	{TIMER_ENDTIME && <Timer endtime={TIMER_ENDTIME} title="До конца акции осталось" subtitle="Подзаголовок" />}
 	<Callback bgUrl="/img/konkurenty.webp" />
 	<Services />
