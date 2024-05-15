@@ -4,6 +4,7 @@ import Layout from '@/layouts/Layout.astro';
 import Banner from '@/components/Banner/Banner.astro';
 import SpecialServices from '@/components/SpecialServices/Index.astro';
 import Faq from '@/components/Faq/Index.astro';
+import NewServices from '@/components/Services/New.astro';
 import PageTitle from '@/components/PageTitle/Index.astro';
 import Timer from '@/components/Timer/Timer.astro';
 import ModelList from '@/components/Model/ModelList.astro';
@@ -15,14 +16,16 @@ import models from '@/data/models.json'
 import salons from '@/data/salons.json'
 import specialServicesData from '@/data/special-services.json'
 import faqData from '@/data/faq.json'
+import servicesData from '@/data/services.json'
 const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(', ');
 ---
 
 <Layout title="INFINITI Самарские автомобили – официальный дилер Infiniti в городе Самара" description="Купить Infiniti у официального дилера INFINITI Самарские автомобили в городе Самара. Цены на Инфинити в INFINITI Самарские автомобили.">
 	<Banner />
 	<PageTitle />
-	<SpecialServices items={specialServicesData} />
-	<Faq items={faqData} title="Часто задаваемые вопросы" />
+	{specialServicesData && <SpecialServices items={specialServicesData} />}
+	{faqData && <Faq items={faqData} title="Часто задаваемые вопросы" />}
+	{servicesData && <NewServices items={servicesData} title="Услуги сервисного центра" id="new-services" class="bg-gray-50" />}
 	{TIMER_ENDTIME && <Timer endtime={TIMER_ENDTIME} title="До конца акции осталось" subtitle="Подзаголовок" />}
 	<Callback bgUrl="/img/konkurenty.webp" />
 	<Services />
