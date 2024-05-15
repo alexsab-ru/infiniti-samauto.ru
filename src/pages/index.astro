@@ -3,6 +3,7 @@ import {SITE_NAME, BRAND, LEGAL_CITY_WHERE, TIMER_ENDTIME} from '@/const.js';
 import Layout from '@/layouts/Layout.astro';
 import Banner from '@/components/Banner/Banner.astro';
 import SpecialServices from '@/components/SpecialServices/Index.astro';
+import Faq from '@/components/Faq/Index.astro';
 import PageTitle from '@/components/PageTitle/Index.astro';
 import Timer from '@/components/Timer/Timer.astro';
 import ModelList from '@/components/Model/ModelList.astro';
@@ -13,6 +14,7 @@ import Contacts from '@/components/Contacts.astro';
 import models from '@/data/models.json'
 import salons from '@/data/salons.json'
 import specialServicesData from '@/data/special-services.json'
+import faqData from '@/data/faq.json'
 const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(', ');
 ---
 
@@ -20,6 +22,7 @@ const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(
 	<Banner />
 	<PageTitle />
 	<SpecialServices items={specialServicesData} />
+	<Faq items={faqData} />
 	{TIMER_ENDTIME && <Timer endtime={TIMER_ENDTIME} title="До конца акции осталось" subtitle="Подзаголовок" />}
 	<Callback bgUrl="/img/konkurenty.webp" />
 	<Services />
