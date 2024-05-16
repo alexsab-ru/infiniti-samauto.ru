@@ -25,15 +25,15 @@ const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(
 
 <Layout title="INFINITI Самарские автомобили – официальный дилер Infiniti в городе Самара" description="Купить Infiniti у официального дилера INFINITI Самарские автомобили в городе Самара. Цены на Инфинити в INFINITI Самарские автомобили.">
 	<Banner />
-	<PageTitle />
+	<PageTitle title="Сервисный центр Infiniti в Самаре" />
 	{TIMER_ENDTIME && <Timer endtime={TIMER_ENDTIME} title="До конца акции осталось" subtitle="Подзаголовок" />}
 	{specialServicesData && <SpecialServices items={specialServicesData} />}
-	{faqData && <Faq items={faqData} title="Часто задаваемые вопросы" class="bg-gray-100" />}
+	<LatestPosts collectionName="special-offers" title="Специальные предложения" id="specials" class="bg-gray-100" />
 	{servicesData && <NewServices items={servicesData} title="Услуги сервисного центра" id="new-services" />}
+	{faqData && <Faq items={faqData} title="Часто задаваемые вопросы" class="bg-gray-100" />}
+	<Callback bgUrl="/img/banners/qx55.webp" />
 	{reviewsData && <ReviewsSlider items={reviewsData} title="Отзывы о нас" class="bg-gray-100" />}
-	<LatestPosts collectionName="special-offers" title="Специальные предложения" id="specials" />
-	<Callback bgUrl="/img/konkurenty.webp" />
-	<Services />
+	<Services title="Услуги сервисного центра" />
 	<Contacts
 		mapImg="./img/map-bg.webp"
 		title="Наши контакты"
