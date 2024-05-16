@@ -1,0 +1,27 @@
+---
+h1: Наслаждайтесь чистым воздухом в салоне INFINITI
+title: Наслаждайтесь чистым воздухом в салоне INFINITI
+breadcrumb: Замена фильтра салона и очистка системы кондиционирования
+pubDate: 2024-01-01
+image: /img/specials-offers/naslazhdaites-chistim-vozduhom-v-salone-infiniti/thumb.webp
+description: "Замена фильтра салона и очистка системы кондиционирования"
+---
+import Button from '@/components/Button/Button.astro';
+import { PHONE } from '@/const';
+import { phoneFormat } from '@/js/utils/numbers.format'
+
+Замена фильтра салона и очистка системы кондиционирования Вашего INFINITI по специальной цене - 1 200 рублей!
+
+Предложение действительно до 30 декабря 2024 года. 
+
+Подробности в отделе сервисного обслуживания: <a class="whitespace-nowrap" href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+
+<div class="flex justify-center mt-10 mb-5">
+    <Button 
+        classes="popup-link block !px-4 xl:!px-8 !py-2 xl:!py-3 !text-white !no-underline" 
+        url="#common-modal" 
+        title="Записаться на замену фильтра"
+        dataTitle="Замена фильтра салона и&nbsp;очистка системы кондиционирования за&nbsp;1&nbsp;200 рублей"
+        dataFormName={`Запись на замену фильтра салона`}
+    />
+</div>

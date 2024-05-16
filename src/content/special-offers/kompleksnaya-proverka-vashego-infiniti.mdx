@@ -1,0 +1,42 @@
+---
+h1: Комплексная проверка Вашего INFINITI
+title: Комплексная проверка Вашего INFINITI
+breadcrumb: Комплексная проверка
+pubDate: 2024-01-01
+image: /img/specials-offers/kompleksnaya-proverka-vashego-infiniti/thumb.webp
+description: "Комплексная проверка Вашего INFINITI"
+---
+import Button from '@/components/Button/Button.astro';
+import { PHONE } from '@/const';
+import { phoneFormat } from '@/js/utils/numbers.format'
+
+Комплексная проверка автомобиля по 10 пунктам, в состав проверки входит:  
+
+- 1.&nbsp;Проверка элементов подвески
+- 2.&nbsp;Диагностика тормозной системы
+- 3.&nbsp;Диагностика рулевой системы
+- 4.&nbsp;Проверка состояния аккумуляторной батареи
+- 5.&nbsp;Проверка уровня технических жидкостей
+- 6.&nbsp;Проверка свечей
+- 7.&nbsp;Проверка фильтра
+- 8.&nbsp;Проверка состояния тормозных дисков
+- 9.&nbsp;Проверка состояния колодок
+- 10.&nbsp;Проверка лампочек
+ 
+
+Стоимость услуги - 2 000 рублей!
+ 
+
+Предложение действительно до 30 декабря 2024 года. 
+
+Подробности в отделе сервисного обслуживания: <a class="whitespace-nowrap" href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+
+<div class="flex justify-center mt-10 mb-5">
+    <Button 
+        classes="popup-link block !px-4 xl:!px-8 !py-2 xl:!py-3 !text-white !no-underline" 
+        url="#common-modal" 
+        title="Записаться на комплексную проверку"
+        dataTitle="Записаться на комплексную проверку за&nbsp;2&nbsp;000 рублей"
+        dataFormName={`Запись на комплексную проверку`}
+    />
+</div>

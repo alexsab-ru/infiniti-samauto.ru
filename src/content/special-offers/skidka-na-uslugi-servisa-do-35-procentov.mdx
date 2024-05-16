@@ -1,0 +1,31 @@
+---
+h1: Скидка на услуги сервиса до 35%
+title: Скидка на услуги сервиса до 35%
+breadcrumb: Скидка на услуги сервиса
+pubDate: 2024-01-01
+image: /img/specials-offers/skidka-na-uslugi-servisa-do-35-procentov/thumb.webp
+description: "Сервисное обслуживание Вашего автомобиля INFINITI на специальных условиях со скидкой до 35%"
+---
+import Button from '@/components/Button/Button.astro';
+import { PHONE } from '@/const';
+import { phoneFormat } from '@/js/utils/numbers.format'
+
+Приглашаем Вас на сервисное обслуживание Вашего автомобиля INFINITI на специальных условиях!
+
+- ● Скидка на услуги сервиса 35% для автомобилей старше 7 лет
+- ● Скидка на услуги сервиса 20% для автомобилей от 5 до 7 лет
+- ● Скидка на услуги сервиса 15% для автомобилей от 3 до 5 лет 
+
+Предложение действительно до 30 декабря 2024 года. 
+
+Подробности в отделе сервисного обслуживания: <a class="whitespace-nowrap" href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+
+<div class="flex justify-center mt-10 mb-5">
+    <Button 
+        classes="popup-link block !px-4 xl:!px-8 !py-2 xl:!py-3 !text-white !no-underline" 
+        url="#common-modal" 
+        title="Записаться на сервисное обслуживание"
+        dataTitle="Записаться на&nbsp;сервисное обслуживание на&nbsp;специальных условиях со&nbsp;скидкой до&nbsp;35%"
+        dataFormName={`Запись на сервисное обслуживание со скидкой до 35%`}
+    />
+</div>

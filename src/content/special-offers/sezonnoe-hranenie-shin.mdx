@@ -1,0 +1,31 @@
+---
+h1: Сезонное хранение шин
+title: Сезонное хранение шин
+breadcrumb: Сезонное хранение шин
+pubDate: 2024-01-01
+image: /img/specials-offers/sezonnoe-hranenie-shin/thumb.webp
+description: "Сезонное хранение шин"
+---
+import Button from '@/components/Button/Button.astro';
+import { PHONE } from '@/const';
+import { phoneFormat } from '@/js/utils/numbers.format'
+
+Мы заботимся о вашем комфорте!
+
+Правильное сезонное хранение колес — один из факторов, обеспечивающих долгий срок эксплуатации. В нашем шинном отеле поддерживается оптимальная температура и влажность – здесь шины скрыты от прямых солнечных лучей и сохраняют свойства.
+
+Сезонное хранение колес вашего INFINITI всего за 3 500 рублей за сезон (6 месяцев).
+
+Предложение действительно до 30 декабря 2024 года.
+
+Подробности в отделе сервисного обслуживания: <a class="whitespace-nowrap" href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+
+<div class="flex justify-center mt-10 mb-5">
+    <Button 
+        classes="popup-link block !px-4 xl:!px-8 !py-2 xl:!py-3 !text-white !no-underline" 
+        url="#common-modal" 
+        title="Воспользоваться услугой"
+        dataTitle="Сезонное хранение шин"
+        dataFormName={`Сезонное хранение шин`}
+    />
+</div>
