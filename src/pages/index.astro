@@ -6,6 +6,7 @@ import SpecialServices from '@/components/SpecialServices/Index.astro';
 import Faq from '@/components/Faq/Index.astro';
 import NewServices from '@/components/Services/New.astro';
 import ReviewsSlider from '@/components/Reviews/Index.astro';
+import LatestPosts from '@/components/LatestPosts/Index.astro'
 import PageTitle from '@/components/PageTitle/Index.astro';
 import Timer from '@/components/Timer/Timer.astro';
 import ModelList from '@/components/Model/ModelList.astro';
@@ -30,6 +31,7 @@ const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(
 	{faqData && <Faq items={faqData} title="Часто задаваемые вопросы" class="bg-gray-100" />}
 	{servicesData && <NewServices items={servicesData} title="Услуги сервисного центра" id="new-services" />}
 	{reviewsData && <ReviewsSlider items={reviewsData} title="Отзывы о нас" class="bg-gray-100" />}
+	<LatestPosts collectionName="special-offers" title="Специальные предложения" id="specials" />
 	<Callback bgUrl="/img/konkurenty.webp" />
 	<Services />
 	<Contacts
