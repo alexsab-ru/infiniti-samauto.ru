@@ -31,7 +31,7 @@ import socials from '@/data/socials.json';
 		<div class="container">
 			<div class="flex items-center justify-between xs:py-2 xs:h-auto h-[60px] md:h-[80px]">
 				<Logo />
-				<div class="flex items-center xs:gap-3 gap-4 xl:gap-10">
+				<div class="flex items-center justify-end xs:gap-3 gap-4 xl:gap-10 w-full sm:w-auto">
 					<div class="hidden md:flex flex-col">
 					{
 						salons.length && salons.map((salon: any, index) => {
@@ -52,7 +52,7 @@ import socials from '@/data/socials.json';
 								>Адреса салонов</a>
 								<small class="block text-xs">{salons.length}&nbsp;{declOfNums(salons.length, ['салон', 'салона', 'салонов'])}</small>
 							</div>) : (
-							<div class="hidden lg:flex items-center gap-1 font-medium text-sm xl:text-base">
+							<div class="hidden lg:flex items-center gap-1 font-medium text-sm 2xl:text-base">
 								<Icon name="mdi:map-marker-outline" class="text-2xl" />
 								<Fragment set:html={salons[0].address} />
 							</div>
