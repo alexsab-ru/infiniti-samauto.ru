@@ -2,21 +2,21 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 // Название сайта по умолчанию
 export const SITE_NAME = 'Самарские автомобили';
 // Юр лицо
-export const LEGAL_ENTITY = 'ООО «Юридическое название»';
+export const LEGAL_ENTITY = 'ООО «Самарские автомобили Юг-Н»';
 // ИНН
-export const LEGAL_INN = '1234567890';
+export const LEGAL_INN = '6314042605';
 // Город
 export const LEGAL_CITY = 'г. Самара';
 // где? в Городе
 export const LEGAL_CITY_WHERE = 'Самаре';
 // Описание сайта по умолчанию
-export const SITE_DESCR = 'Infiniti самарские автомобили';
+export const SITE_DESCR = 'INFINITI самарские автомобили';
 // Имя пользователя в Телегам
 export const TELEGRAM = '';
 // Телефон по умолчанию
 export const PHONE = '8 (846) 993-66-00';
 // Бренд
-export const BRAND = 'Infiniti';
+export const BRAND = 'INFINITI';
 // Конечное время для таймера
 //string 2024-04-26 or 2024-04-26 23:59:59 or December 31 2015 or December 31 2015 23:59:59 GMT+02:00
 export const TIMER_ENDTIME = '';
@@ -29,7 +29,7 @@ export const LINKS_MENU = [
 	// {url: 'cars/', name: 'Авто в наличии'},
 	{url: 'special-offers/', name: 'Спецпредложения'},
 	// {url: 'news/', name: 'Новости'},
-	{url: 'test-drive/', name: 'Запись на тест-драйв'},
+	// {url: 'test-drive/', name: 'Запись на тест-драйв'},
 	{url: 'service-request/', name: 'Запись на сервис'},
 	{url: '#services', name: 'Услуги'},
 	{url: 'contacts/', name: 'Контакты'},
