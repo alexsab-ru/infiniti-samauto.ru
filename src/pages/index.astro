@@ -23,9 +23,9 @@ import reviewsData from '@/data/reviews.json'
 const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(', ');
 ---
 
-<Layout title="INFINITI Самарские автомобили – официальный дилер Infiniti в городе Самара" description="Купить Infiniti у официального дилера INFINITI Самарские автомобили в городе Самара. Цены на Инфинити в INFINITI Самарские автомобили.">
+<Layout title="INFINITI Самарские автомобили – официальный дилер INFINITI в городе Самара" description="САМАРСКИЕ АВТОМОБИЛИ- официальный сервисный центр INFINITI в Самаре. Сервисное обслуживание INFINITI по выгодным ценам, оригинальные запчасти, постгарантийное обслуживание! Тел.: +7 (846) 993-66-00.">
 	<Banner />
-	<PageTitle title="Сервисный центр Infiniti в Самаре" />
+	<PageTitle title="Сервисный центр INFINITI в Самаре" />
 	{TIMER_ENDTIME && <Timer endtime={TIMER_ENDTIME} title="До конца акции осталось" subtitle="Подзаголовок" />}
 	{specialServicesData && <SpecialServices items={specialServicesData} />}
 	<LatestPosts collectionName="special-offers" title="Специальные предложения" id="specials" class="bg-gray-100" />
