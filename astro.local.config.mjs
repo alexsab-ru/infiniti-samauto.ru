@@ -10,7 +10,7 @@ import icon from "astro-icon";
 export default defineConfig({
 	integrations: [
 		tailwind({
-			configFile: './tailwind.infiniti.config.js'
+			configFile: './tailwind.infiniti.js'
 		}),
 		sitemap(),
 		robots(),
