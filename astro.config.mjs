@@ -26,6 +26,6 @@ export default defineConfig({
 		mdx(),
 		icon(),
 	],
-	site: 'https://dev.diywebdev.ru',
+	site: 'https://infinitisamara.ru',
 	base: "/"
 });
