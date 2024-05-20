@@ -5,7 +5,7 @@ import './modules/latest.posts';
 
 import { connectForms, cookiecook } from '@alexsab-ru/scripts';
 cookiecook();
-connectForms('https://alexsab.ru/lead/test/');
+connectForms('https://alexsab.ru/lead/infiniti/samara/');
 
 import GLightbox from 'glightbox';
 import 'glightbox/dist/css/glightbox.min.css';
@@ -43,7 +43,7 @@ if(lazys.length){
 
 function executeRecaptcha() {
 grecaptcha.ready(function() {
-	grecaptcha.execute('6Lepfy4pAAAAAAGHFP655qNe6Bb_BcskklcxajC6', {action: 'open'}).then(function(token) {
+	grecaptcha.execute('6Lepfy4pAAAAAAGHFP655qNe6Bb_BcskklcxajC6', {action: 'infiniti_samara'}).then(function(token) {
 		let formData = new FormData();
 		formData.append('g-recaptcha-response', token);
 		const params = new URLSearchParams([...formData]);
