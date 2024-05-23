@@ -27,11 +27,26 @@ export default defineConfig({
 		icon(),
 	],
 	redirects: {
-		'/models/': '/cars/',
-		'/about/contacts/': '/contacts/',
-		'/owners/service-sign-in/': '/service-request/',
-		'/owners/': '/special-offers/',
-		'/contact-us/': '/contacts/'
+		'/models/': {
+			status: 301,
+			destination:'/cars/'
+		},
+		'/about/contacts/': {
+			status: 301,
+			destination:'/contacts/'
+		},
+		'/owners/service-sign-in/': {
+			status: 301,
+			destination:'/service-request/'
+		},
+		'/owners/': {
+			status: 301,
+			destination:'/special-offers/'
+		},
+		'/contact-us/': {
+			status: 301,
+			destination:'/contacts/'
+		},
 	},
 	site: 'https://infinitisamara.ru',
 	base: "/"
