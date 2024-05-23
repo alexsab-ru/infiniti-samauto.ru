@@ -10,7 +10,7 @@ export const LEGAL_CITY = 'г. Самара';
 // где? в Городе
 export const LEGAL_CITY_WHERE = 'Самаре';
 // Описание сайта по умолчанию
-export const SITE_DESCR = 'INFINITI самарские автомобили';
+export const SITE_DESCR = 'INFINITI Самарские автомобили';
 // Имя пользователя в Телегам
 export const TELEGRAM = '';
 // Телефон по умолчанию
