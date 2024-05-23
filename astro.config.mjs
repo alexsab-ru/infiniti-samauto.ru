@@ -26,6 +26,13 @@ export default defineConfig({
 		mdx(),
 		icon(),
 	],
+	redirects: {
+		'/models/': '/cars/',
+		'/about/contacts/': '/contacts/',
+		'/owners/service-sign-in/': '/service-request/',
+		'/owners/': '/special-offers/',
+		'/contact-us/': '/contacts/'
+	},
 	site: 'https://infinitisamara.ru',
 	base: "/"
 });
