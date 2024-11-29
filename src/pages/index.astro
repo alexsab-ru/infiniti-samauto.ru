@@ -24,6 +24,7 @@ import faqData from '@/data/faq.json'
 import servicesData from '@/data/services.json'
 import reviewsData from '@/data/reviews.json'
 const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(', ');
+import SeoText from '@/components/Seo/Index.astro';
 ---
 
 <Layout title="INFINITI Самарские автомобили – официальный дилер INFINITI в городе Самара" description="INFINITI Самарские автомобили - официальный сервисный центр INFINITI в Самаре. Сервисное обслуживание INFINITI по выгодным ценам, оригинальные запчасти, постгарантийное обслуживание! Тел.: +7 (846) 993-66-00.">
@@ -38,6 +39,7 @@ const salonsPhone = salons.map((salon: any) => { return salons[0].phone }).join(
 	{faqData && <Faq items={faqData} title="Часто задаваемые вопросы" class="bg-gray-100" />}
 	<Callback bgUrl="/img/banners/qx55.webp" />
 	{reviewsData && <ReviewsSlider items={reviewsData} title="Отзывы о нас" class="bg-gray-100" />}
+	<SeoText mdx="index" />
 	<Contacts
 		mapImg="./img/map-bg.webp"
 		title="Наши контакты"

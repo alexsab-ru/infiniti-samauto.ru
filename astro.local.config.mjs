@@ -10,12 +10,21 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+	trailingSlash: 'always',
 	integrations: [
 		tailwind({
 			configFile: './tailwind.infiniti.js'
 		}),
 		sitemap(),
-		robots(),
+		robots({
+			policy: [
+				{
+					userAgent: ["*"],
+					allow: ["/"],
+					disallow: ["/?*"],
+				},
+			  ],
+		}),
 		alpinejs(),
 		mdx(),
 		icon(),

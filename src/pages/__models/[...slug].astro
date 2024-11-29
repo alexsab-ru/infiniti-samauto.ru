@@ -1,10 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Model from '@/components/Model/Model.astro';
+import ModelComplectations from '@/components/Model/Complectations.astro';
 import CarItem from "@/components/Cars/Item.astro";
-import DesignSection from '@/components/Model/sections/design.astro';
-import ExteriorSection from '@/components/Model/sections/exterior.astro';
-import WarantySection from '@/components/Model/sections/waranty.astro';
+import UniversalSection from '@/components/Model/sections/universal.astro';
 
 
 import models from '@/data/models.json';
@@ -18,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 
-import { LEGAL_CITY_WHERE } from '@/const';
+import { LEGAL_CITY_WHERE, BRAND } from '@/const';
 import { breadcrumb } from './index.astro';
 const { model } = Astro.props;
 
@@ -41,17 +40,16 @@ const cars = rawCars && rawCars.length > 0 ? rawCars.filter(
   description={model?.slogan}
   image={model?.image ?? model?.thumb}
 >
-	<Model model={model} breadcrumb={[breadcrumb, {name: model?.name, href: Astro.url.pathname}]} />
+  <h1 class="sr-only">Автомобиль {BRAND} {model.name} в {LEGAL_CITY_WHERE}</h1>
+	<Model model={model} breadcrumb={[breadcrumb, {name: model.name, href: Astro.url.pathname}]} />
   {
-    sections.length > 0 && sections.map(s => (
-      s.id === 'design' ? <DesignSection section={s} /> :
-      s.id === 'exterior' ? <ExteriorSection section={s} /> :
-      s.id === 'waranty' ? <WarantySection section={s} /> :
-      ''
-    ))
+    sections.length > 0 && sections.map(s => ( <UniversalSection section={s} /> ))
+  }
+  {
+    (model?.complectations !== undefined && model?.complectations.length) && <ModelComplectations title={`Подобрать комплектацию ${model?.mark_id} ${model.name}`} model={model} brand={BRAND} />
   }
   {cars.length > 0 && (
-    <section class="bg-gray-50">
+    <section class="odd:bg-gray-100">
       <div class="container">
         <h2 class="text-center font-medium mobile-title-size sm:text-4xl mb-8 sm:mb-14"><Fragment set:html={`Автомобили ${model?.mark_id}&nbsp;${model?.name} в наличии в ${LEGAL_CITY_WHERE}`} /></h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 mt-5 car-list">
