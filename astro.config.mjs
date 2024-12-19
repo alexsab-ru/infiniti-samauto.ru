@@ -55,6 +55,6 @@ export default defineConfig({
 	vite: {
 		plugins: [yaml()]
 	},
-	site: 'https://infinitisamara.ru',
+	site: 'https://infiniti-samauto.ru',
 	base: "/"
 });
