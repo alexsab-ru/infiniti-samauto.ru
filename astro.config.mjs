@@ -53,7 +53,14 @@ export default defineConfig({
 		},
 	},
 	vite: {
-		plugins: [yaml()]
+		plugins: [yaml()],
+		css: {
+			preprocessorOptions: {
+			  	scss: {
+					silenceDeprecations: ['legacy-js-api'],
+				},
+			},
+		},
 	},
 	site: 'https://infiniti-samauto.ru',
 	base: "/"
